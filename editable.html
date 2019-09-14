@@ -60,8 +60,8 @@ function parallax(pageX, pageY, target, container, layer) {
     var parentOffset = $(container).offset() || {};
     var initialOffsetX = $(target).attr('data-paralax-initial-offset-x');
     var initialOffsetY = $(target).attr('data-paralax-initial-offset-y');
-    if(typeof initialOffsetX === 'undefined') $(target).attr('data-paralax-initial-offset-x', $(target).offset().left - parentOffset.left - ($(container).width() / 1));
-    if(typeof initialOffsetY === 'undefined') $(target).attr('data-paralax-initial-offset-y', $(target).offset().top - parentOffset.top - ($(container).height() / 1));
+    if(typeof initialOffsetX === 'undefined') $(target).attr('data-paralax-initial-offset-x', $(target).offset().left - parentOffset.left - ($(container).width() / 2));
+    if(typeof initialOffsetY === 'undefined') $(target).attr('data-paralax-initial-offset-y', $(target).offset().top - parentOffset.top - ($(container).height() / 6));
     // compute layer positions relatively to the parent position
     pageX -= parentOffset.left;
     pageY -= parentOffset.top;
